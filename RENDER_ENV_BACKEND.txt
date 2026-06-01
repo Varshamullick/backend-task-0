@@ -1,0 +1,13 @@
+# Render Environment Variables - Backend
+
+MONGODB_URI=mongodb+srv://varshamullick01_db_user:varshamullick01_db_user@cluster0.if1daae.mongodb.net/scalable-api?retryWrites=true&w=majority
+DB_NAME=scalable-api
+PORT=5000
+NODE_ENV=production
+JWT_SECRET=your-secure-random-string-at-least-32-chars
+JWT_EXPIRE=7d
+JWT_REFRESH_EXPIRE=30d
+SWAGGER_ENABLED=true
+LOG_LEVEL=info
+LOG_FILE=logs/app.log
+CORS_ORIGIN=https://scalable-api-frontend.onrender.com

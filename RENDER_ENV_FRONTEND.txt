@@ -1,0 +1,3 @@
+# Render Environment Variables - Frontend
+
+REACT_APP_API_URL=https://scalable-api-backend.onrender.com/api/v1
