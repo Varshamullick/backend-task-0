@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: scalable-api-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm run start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: JWT_REFRESH_EXPIRE
+        value: 30d
+      - key: CORS_ORIGIN
+        value: https://<frontend-service>.onrender.com
+
+  - type: static
+    name: scalable-api-frontend
+    env: static
+    plan: free
+    branch: main
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
