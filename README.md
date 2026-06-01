@@ -122,6 +122,12 @@ JWT_SECRET=your-secret-key-change-in-production
 CORS_ORIGIN=http://localhost:3000
 ```
 
+If you want to use MongoDB Atlas instead of local MongoDB, use a connection string like:
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.if1daae.mongodb.net/<database>?retryWrites=true&w=majority
+```
+Do not include the literal placeholder `<password>` in your final URI.
+
 #### 2. Frontend Setup
 
 ```bash
